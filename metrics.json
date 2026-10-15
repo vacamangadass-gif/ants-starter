@@ -1,0 +1,39 @@
+{
+  "class": "nano",
+  "size_metric_bytes": 12280,
+  "class_max_bytes": 16384,
+  "class_target_bytes": 11468,
+  "fill_of_cap": 0.7495,
+  "artifact_bytes": 11350,
+  "manifest_bytes": 930,
+  "params": 3006,
+  "nodes": 46,
+  "opset": 17,
+  "operators": [
+    "Cast",
+    "Concat",
+    "Constant",
+    "Conv",
+    "Relu",
+    "Slice"
+  ],
+  "adapter_ops_max": 229415,
+  "adapter_ops_budget": 1000000,
+  "infer_us_max": 8079,
+  "deadline_share_ms": 1000.0,
+  "share_used": 0.0081,
+  "target_fraction": 0.7,
+  "engine_digest": "sha256:eead45ca770f5626d1787066bc00522687989101d4bf29ab3ec6ecb712755535",
+  "weights_hash": "sha256:17f9dfb7cd6bb1a4746cd5960a05765916bc775f5a37c9900ded0daac0a12f3a",
+  "manifest_hash": "sha256:58425bd6ee6a0cc7bd529c04eb36d62a09ff7e29f5ad38b3f06cb300f94c1db4",
+  "arch": "Trunk",
+  "reach_cells": 15,
+  "dilations": [
+    [
+      1,
+      2,
+      4,
+      8
+    ]
+  ]
+}

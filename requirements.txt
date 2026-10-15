@@ -1,0 +1,10 @@
+# 平台自有的训练代码库（作为一个 Python 库提供）：包含教师策略、特征编码、行为克隆以及模型导出功能。
+# 它会自动引入 torch、numpy 和 onnx 依赖。该代码存放在 Ants 仓库中（与它所对弈的游戏规则位于同一仓库），
+# 因此 pip 会克隆该仓库并构建 `baselines/` 子目录。若需要精确复现运行结果，可指定特定的 commit SHA：
+#   tb-baselines @ git+https://github.com/Tiny-Brains/ants@<sha>#subdirectory=baselines
+# `train.py` 需要比 ants 仓库 main 分支更新的 tb_baselines 版本，且这不仅涉及 `--memory` 路径：
+# 因为在每次运行时它都会传入 `export --repro`，所以在 ants 的 main 分支合入该参数支持前，
+# 直接运行普通 `python train.py` 可能会在导出步骤报错：`unrecognized arguments: --repro`。
+# 记忆相关的参数（`collect --remember`、`bc --memory`）仅在运行 `train.py --memory` 时需要。
+# 在 ants 的 main 分支同时支持这两者之前，可从包含该特性的本地检出目录中安装：`pip install -e <ants checkout>/baselines`。
+tb-baselines @ git+https://github.com/Tiny-Brains/ants#subdirectory=baselines
